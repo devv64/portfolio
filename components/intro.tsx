@@ -9,9 +9,11 @@ import { BsArrowRight, BsLinkedin } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
 import { FaGithubSquare } from 'react-icons/fa';
 import { useSectionInView } from '@/lib/hooks';
+import { useActiveSectionContext } from '@/context/active-section-context';
 
 export default function Intro() {
   const { ref } = useSectionInView('Home', 0.5);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section id='home' className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]' ref={ref}>
@@ -65,20 +67,23 @@ export default function Intro() {
                 delay: 0.1,
             }}
         >
-            <Link href="#contact" className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'>
+            <Link href="#contact" className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition' onClick={() => {
+                setActiveSection('Contact');
+                setTimeOfLastClick(Date.now());
+            }}>
                 Get in touch <BsArrowRight className='opacity-70 group-hover:translate-x-1 group-hover:scale-150 group-hover:text-[#ff61ed] transition '/>
             </Link>
 
-            <a className='group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition cursor-pointer border border-black/10 shadow-md' href="/Resume.pdf" download={true}>
+            <a className='group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition cursor-pointer borderBlack shadow-md' href="/Resume.pdf" download={true}>
                 Download Resume <HiDownload className='opacity-70 group-hover:translate-y-1 group-hover:scale-150 group-hover:text-[#ff61ed] transition' />
             </a>
 
-            <a className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15]  active:scale-105 hover:text-[#ff61ed]/70 transition cursor-pointer border border-black/10 shadow-md'
+            <a className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15]  active:scale-105 hover:text-[#ff61ed]/70 transition cursor-pointer borderBlack shadow-md'
             href="https://linkedin.com/in/devv64" target="_blank">
                 <BsLinkedin />
             </a>
 
-            <a className='bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 hover:text-[#ff61ed]/70 transition cursor-pointer border border-black/10 shadow-md'
+            <a className='bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 hover:text-[#ff61ed]/70 transition cursor-pointer borderBlack shadow-md'
             href="https://github.com/devv64" target="_blank">
                 <FaGithubSquare />
             </a>
