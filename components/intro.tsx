@@ -74,16 +74,16 @@ export default function Intro() {
                 Get in touch <BsArrowRight className='opacity-70 group-hover:translate-x-1 group-hover:scale-150 group-hover:text-[#ff61ed] transition '/>
             </Link>
 
-            <a className='group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition cursor-pointer borderBlack shadow-md' href="/Resume.pdf" download={true}>
+            <a className='group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition cursor-pointer borderBlack shadow-md dark:bg-white/10' href="/Resume.pdf" download={true}>
                 Download Resume <HiDownload className='opacity-70 group-hover:translate-y-1 group-hover:scale-150 group-hover:text-[#ff61ed] transition' />
             </a>
 
-            <a className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15]  active:scale-105 hover:text-[#ff61ed]/70 transition cursor-pointer borderBlack shadow-md'
+            <a className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15]  active:scale-105 hover:text-[#ff61ed]/70 transition cursor-pointer borderBlack shadow-md dark:bg-white/10 dark:text-white/60'
             href="https://linkedin.com/in/devv64" target="_blank">
                 <BsLinkedin />
             </a>
 
-            <a className='bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 hover:text-[#ff61ed]/70 transition cursor-pointer borderBlack shadow-md'
+            <a className='bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 hover:text-[#ff61ed]/70 transition cursor-pointer borderBlack shadow-md dark:bg-white/10 dark:text-white/60'
             href="https://github.com/devv64" target="_blank">
                 <FaGithubSquare />
             </a>
