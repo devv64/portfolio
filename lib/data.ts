@@ -2,6 +2,7 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import { DiPython } from "react-icons/di";
 import corpcommentImg from "@/public/avatar.png";
 import rmtdevImg from "@/public/background.png";
 import wordanalyticsImg from "@/public/CMS.png";
@@ -35,15 +36,47 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Stevens Institute of Technology",
+    title: "Cornell University",
+    location: "Ithaca, NY",
+    description:
+      "Currently studying computer science at Cornell, I will graduate in May 2025",
+    icon: React.createElement(LuGraduationCap),
+    date: "September 2024 - May 2025",
+  },
+  {
+    title: "Merck | IT Emerging Talent Intern",
+    location: "Rahway, NJ",
+    description:
+      "Currently working as a Data Analyst / Software Engineer Intern at Merck through the IT Emerging Talent Program.",
+    icon: React.createElement(DiPython),
+    date: "June 2024 - August 2024",
+  },
+  {
+    title: "Hanlon Financial Systems Center | Research Assistant",
     location: "Hoboken, NJ",
     description:
-      "Currently studying computer science at Stevens, I will graduate in May 2024",
+      "I spent the semester working on a reinforcement learning environment simulating a stock market with multiple different agent types. This project resulted in a paper that is awaiting peer review. I am also working on a follow up project/ paper focusing on more agent types within a fine tuned environment.",
+    icon: React.createElement(CgWorkAlt),
+    date: "February 2024 - June 2024",
+  },
+  {
+    title: "Stevens Institute of Technology | Student",
+    location: "Hoboken, NJ",
+    description:
+      "I graduated in May 2024 with a 3.884 GPA studying computer science.",
     icon: React.createElement(LuGraduationCap),
     date: "September 2021 - May 2024",
   },
   {
-    title: "Applied AI Researcher Intern",
+    title: "Stevens Student Managed Index Fund | Software Engineer Intern",
+    location: "Hoboken, NJ",
+    description:
+      "I enhanced internal website functionality using NextJS, implementing modularization and optimizing components for server-side rendering. Additionally, I revamped the data storage architecture by transitioning from a pickle file to a PostgreSQL database on AWS, and streamlined production updates with Docker, synchronized with GitHub releases.",
+    icon: React.createElement(FaReact),
+    date: "January 2024 - May 2024",
+  },
+  {
+    title: "Stevens | Applied AI Researcher Intern",
     location: "Hoboken, NJ",
     description:
       "I did research at Stevens over the summer. I used natural language processing and topic modeling to perform a literature review on over 3600 papers. I also built a page to visualize the results of these models.",
@@ -51,11 +84,11 @@ export const experiencesData = [
     date: "May 2023 - August 2023",
   },
   {
-    title: "Machine Learning Engineer Intern",
+    title: "Omnidya | Machine Learning Engineer Intern",
     location: "Los Angeles, CA | Remote",
     description:
       "I worked with a data-focused insurtech company and led various data analysis initiatives to improve the company's algorithms. During the second half of this internship, I worked on a suite of computer vision models to detect multiple driving hazards.",
-    icon: React.createElement(FaReact),
+    icon: React.createElement(DiPython),
     date: "December 2022 - August 2023",
   },
 ] as const;
