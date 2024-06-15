@@ -4,6 +4,7 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import { DiPython } from "react-icons/di";
 import corpcommentImg from "@/public/avatar.png";
+import sidehustlerImg from "@/public/sidehustler.png";
 import rmtdevImg from "@/public/background.png";
 import wordanalyticsImg from "@/public/CMS.png";
 
@@ -94,6 +95,13 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: "SideHustler",
+    description:
+      "This was the final group project of my web dev 2 class. We built a full stack marketplace that connects freelancers with clients. The frontend uses React.js, Tailwind, and Firebase. The backend uses Express.js and MongoDB. Additionally, we used ImageMagick, Vercel and Web Sockets.",
+    tags: ["React", "Express.js", "MongoDB", "Tailwind", "Firebase"],
+    imageUrl: sidehustlerImg,
+  },
   {
     title: "Boat Detector",
     description:
